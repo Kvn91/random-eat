@@ -1,31 +1,16 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { render } from 'react-dom';
-import Hello from './Hello';
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
 import './style.css';
+import App from './App';
+import reducers from './reducers';
 
-interface AppProps { }
-interface AppState {
-  name: string;
-}
+let store = createStore(reducers);
 
-class App extends Component<AppProps, AppState> {
-  constructor(props) {
-    super(props);
-    this.state = {
-      name: 'React'
-    };
-  }
-
-  render() {
-    return (
-      <div>
-        <Hello name={this.state.name} />
-        <p>
-          Start editing to see some magic happen :)
-        </p>
-      </div>
-    );
-  }
-}
-
-render(<App />, document.getElementById('root'));
+render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById('root')
+);
