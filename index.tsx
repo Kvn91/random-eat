@@ -10,8 +10,6 @@ import { getRestaurants } from './actions/restaurants.actions';
 
 const store = createStore(reducers, applyMiddleware(thunk));
 
-store.dispatch(getRestaurants());
-
 render(
   <Provider store={store}>
     <App />
