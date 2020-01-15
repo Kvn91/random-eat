@@ -4,7 +4,8 @@ import RestaurantsContainer from './containers/restaurants.container';
 export default function App() {
   return (
     <div>
-      zzzzqqq
+      zzzzqqqsasaa
+      //<RestaurantsContainer title={'Voter pour des restaurants'}/>
     </div>
   )
 }
