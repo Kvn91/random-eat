@@ -7,3 +7,10 @@ import './style.css';
 import App from './App';
 import reducers from './reducers';
 import { getRestaurants } from './actions/restaurants.actions';
+
+const store = createStore(reducers);
+
+render(
+  <App />,
+  document.getElementById('root')
+);
