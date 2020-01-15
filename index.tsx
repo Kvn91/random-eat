@@ -1,5 +1,4 @@
 import React from 'react';
-import thunk from 'redux-thunk';
 import { render } from 'react-dom';
 import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
@@ -8,9 +7,11 @@ import App from './App';
 import reducers from './reducers';
 import { getRestaurants } from './actions/restaurants.actions';
 
-const store = createStore(reducers, applyMiddleware(thunk));
+const store = createStore(reducers);
 
 render(
-    <App />,
+  <Provider store={store}>
+    <App />
+  </Provider>,
   document.getElementById('root')
 );
