@@ -1,3 +1,8 @@
 export default function RestaurantsReducer(state = [], action) {
-  return state;
+  switch (action.type) {
+    case GET_RESTAURANTS: 
+      return [...state, action.payload];
+    default:
+      return state;
+  }
 }

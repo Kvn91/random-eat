@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "Môk",
+    "description": "lorem ipsum",
+    "type": "Coréen"
+  },
+  {
+    "id": 2,
+    "name": "Parma Pizza",
+    "description": "lorem ipsum",
+    "type": "Italien"
+  },
+  {
+    "id": 3,
+    "name": "Midi Gourmet",
+    "description": "lorem ipsum",
+    "type": "Sandwicherie"
+  }
+]
