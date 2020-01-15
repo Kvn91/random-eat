@@ -11,8 +11,6 @@ import { getRestaurants } from './actions/restaurants.actions';
 const store = createStore(reducers, applyMiddleware(thunk));
 
 render(
-  <Provider store={store}>
-    <App />
-  </Provider>,
+    <App />,
   document.getElementById('root')
 );
