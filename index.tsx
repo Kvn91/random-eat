@@ -8,9 +8,13 @@ import App from './App';
 import reducers from './reducers';
 import { getRestaurants } from './actions/restaurants.actions';
 
-const store = createStore(reducers);
+const store = createStore(reducers, applyMiddleware(thunk));
+
+store.dispatch(getRestaurants());
 
 render(
-  <App />,
+  <Provider store={store}>
+    <App />
+  </Provider>,
   document.getElementById('root')
 );
