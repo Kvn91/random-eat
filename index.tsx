@@ -10,7 +10,7 @@ import { getRestaurants } from './actions/restaurants.actions';
 
 const store = createStore(reducers);
 
-//store.dispatch(getRestaurants());
+store.dispatch(getRestaurants());
 
 render(
   <Provider store={store}>
