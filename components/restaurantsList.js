@@ -1,12 +1,12 @@
 import React from 'react';
 
-export default function RestaurantsList(props) {
-  
-  const { title, restaurants } = props;
-  
-  return (
-    <div>
-      {title}
-    </div>
-  )
-}
+const RestaurantsList = ({ title, children }) => (
+  <div>
+    <h3>{title}</h3>
+    <ul style={{listStyle: 'none'}} id="restaurantsList">
+      {children}
+    </ul>
+  </div>
+)
+
+export default RestaurantsList;

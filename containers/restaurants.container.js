@@ -1,19 +1,31 @@
+import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import RestaurantsList from '../components/restaurantsList';
+import RestaurantCard from '../components/restaurantCard';
 import * as Actions from '../actions/restaurants.actions';
 
-let propsMapping = (store) => ({ 
+const propsMapping = (store) => ({ 
     restaurants: store.restaurants,
 });
 
-let dispatchMapping = dispatch => ({
+const dispatchMapping = dispatch => ({
     actions: bindActionCreators(Actions, dispatch)
 });
   
-let RestaurantsContainer = connect(
+const RestaurantsContainer = ({ title, restaurants }) => (
+  <div>
+    <RestaurantsList title={title}>
+        {restaurants[0].map((restaurant, i) => (
+            <li>
+              <RestaurantCard key={restaurant.id} restaurant={restaurant}/>
+            </li>
+        ))}
+    </RestaurantsList>
+  </div>
+)
+
+export default connect(
     propsMapping,
     dispatchMapping
-)(RestaurantsList)
-
-export default RestaurantsContainer;
+)(RestaurantsContainer);

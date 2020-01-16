@@ -6,4 +6,4 @@ const getRestaurantsSuccess = restaurants => ({
   payload: restaurants
 })
 
-export const getRestaurants = () => dispatch => dispatch(getRestaurantsSuccess([]));
+export const getRestaurants = () => dispatch => dispatch(getRestaurantsSuccess(restaurants));
