@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types'
 
 const RestaurantsList = ({ title, children }) => (
   <div>
@@ -8,5 +9,10 @@ const RestaurantsList = ({ title, children }) => (
     </ul>
   </div>
 )
+
+RestaurantsList.propTypes = {
+  title: PropTypes.string.isRequired,
+  children: PropTypes.node
+}
 
 export default RestaurantsList;
