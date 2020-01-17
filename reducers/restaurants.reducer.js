@@ -9,4 +9,14 @@ const RestaurantsReducer = (state = [], action) => {
   }
 }
 
-export default RestaurantsReducer
+export default RestaurantsReducer;
+
+export const getFilteredRestaurants = (filter = '', restaurants) => {
+  switch (filter) {
+    case 'VOTED':
+    console.log(restaurants);
+      return restaurants.map(product => (product.voted === 'true'));
+    default:
+      return restaurants;
+  }
+}

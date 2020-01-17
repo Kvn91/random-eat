@@ -3,18 +3,21 @@
     "id": 1,
     "name": "Môk",
     "description": "lorem ipsum",
-    "type": "Coréen"
+    "type": "Coréen",
+    "voted": false
   },
   {
     "id": 2,
     "name": "Parma Pizza",
     "description": "lorem ipsum",
-    "type": "Italien"
+    "type": "Italien",
+    "voted": false
   },
   {
     "id": 3,
     "name": "Midi Gourmet",
     "description": "lorem ipsum",
-    "type": "Sandwicherie"
+    "type": "Sandwicherie",
+    "voted": false
   }
 ]
