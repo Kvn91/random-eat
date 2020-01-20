@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types'
 
-const RestaurantCard = ({ restaurant }) => (
-  <div>
-    <p>{restaurant.name}</p>
+const RestaurantCard = ({ restaurant, onVote }) => (
+  <div className="restaurantCard" onClick={onVote}>
+      <p>{restaurant.name}</p>
     <p>Description : {restaurant.description}</p>
   </div>
 )

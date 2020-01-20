@@ -2,9 +2,10 @@ h1, p {
   font-family: Lato;
 }
 
-#restaurantsList>li {
+.restaurantCard {
   border: 1px solid red;
   margin : 0.5em;
   padding: 1em;
   font-size: 13px;
+  cursor: pointer;
 }

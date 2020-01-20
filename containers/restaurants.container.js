@@ -4,28 +4,29 @@ import { bindActionCreators } from 'redux';
 import PropTypes from 'prop-types'
 import RestaurantsList from '../components/restaurantsList';
 import RestaurantCard from '../components/restaurantCard';
-import * as Actions from '../actions/restaurants.actions';
-import { getFilteredRestaurants } from '../reducers/restaurants.reducer';
 import * as filters from '../constants/FilterTypes';
+import * as actions from '../actions/restaurants.actions';
 
 const propsMapping = (store) => ({ 
-    restaurants: store.restaurants,
+    restaurants: store.restaurants.allRestaurants,
 });
 
 const dispatchMapping = dispatch => ({
-    actions: bindActionCreators(Actions, dispatch)
+    actions: bindActionCreators(actions, dispatch)
 });
   
-const RestaurantsContainer = ({ title, filter = '', restaurants }) => {
+const RestaurantsContainer = ({ title, filter = '', restaurants, actions }) => {
 
   let restaurantsToShow;
 
+  //console.log(restaurants, 'zertyuiop');
+
   switch (filter) {
     case filters.VOTED:
-      restaurantsToShow = restaurants[0].filter(r => (r.voted));
+      restaurantsToShow = restaurants.filter(r => (r.voted));
       break;
     default:
-      restaurantsToShow = restaurants[0];
+      restaurantsToShow = restaurants;
   }
 
   return(
@@ -33,7 +34,11 @@ const RestaurantsContainer = ({ title, filter = '', restaurants }) => {
       <RestaurantsList title={title}>
           {restaurantsToShow.map((restaurant, i) => (
               <li>
-                <RestaurantCard key={restaurant.id} restaurant={restaurant}/>
+                <RestaurantCard 
+                  key={restaurant.id} 
+                  restaurant={restaurant} 
+                  onVote={() => actions.voteForARestaurant(restaurant.id)}
+                />
               </li>
           ))}
       </RestaurantsList>

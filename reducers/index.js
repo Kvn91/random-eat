@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import RestaurantsReducer from './restaurants.reducer';
+import restaurants from './restaurants.reducer';
 
 let reducers = combineReducers({
-  restaurants: RestaurantsReducer,
+  restaurants: restaurants,
 });
 
 export default reducers;
