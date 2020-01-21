@@ -33,13 +33,11 @@ const RestaurantsContainer = ({ title, filter = '', restaurants, actions }) => {
     <div>
       <RestaurantsList title={title}>
           {restaurantsToShow.map((restaurant, i) => (
-              <li>
                 <RestaurantCard 
                   key={restaurant.id} 
                   restaurant={restaurant} 
                   onVote={() => actions.voteForARestaurant(restaurant.id)}
                 />
-              </li>
           ))}
       </RestaurantsList>
     </div>

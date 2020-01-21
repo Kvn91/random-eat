@@ -2,11 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types'
 
 const RestaurantsList = ({ title, children }) => (
-  <div>
-    <h3>{title}</h3>
-    <ul style={{listStyle: 'none'}} id="restaurantsList">
+  <div className="col-md-12">
+    <h5>{title}</h5>
+    <div className="row" id="restaurantsList">
       {children}
-    </ul>
+    </div>
   </div>
 )
 

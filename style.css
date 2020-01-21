@@ -1,11 +1,58 @@
-h1, p {
+body {
+  background: #facfad;
   font-family: Lato;
+  color:#000000;
+}
+
+#restaurantsList {
+  position: relative; 
 }
 
 .restaurantCard {
-  border: 1px solid red;
-  margin : 0.5em;
-  padding: 1em;
+  width: 170px;
+  margin: 10px;
+  background: linear-gradient(to bottom right, #f35516, #67a4f3);
+  border: 1px solid #0732c0;
+  color: #fff;
   font-size: 13px;
   cursor: pointer;
 }
+
+.restaurantCard::before {
+  background: #888;
+  position: absolute;
+  display:block;
+  content:'';
+  width: 170%;
+  height: 5%;
+  top: 48%;
+  left: -30%;
+  transform: rotate(59deg);
+}
+
+.restaurantCard::after {
+  background: #888;
+  position: absolute;
+  display:block;
+  content:'';
+  width: 8%;
+  height: 70%;
+  left: 47%;
+  top: 15%;
+  transform: rotate(45deg);
+}
+
+.restaurantName {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.restaurantCard span {
+  text-decoration: underline;
+}
+
+/*.flex-child {
+  white-space: nowrap;
+  overflow: hidden; 
+  text-overflow: ellipsis;
+}*/
