@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types'
 
-const RestaurantCard = ({ restaurant, onClickFunction, classes }) => {
+const RestaurantCard = ({ restaurant, onVote, classes }) => {
 
   const classes = restaurant.veto ? "veto" : '';
 
   return (
-    <div className={'restaurantCard card' + classes} onClick={onClickFunction}>
+    <div className={'restaurantCard card' + classes} onClick={onVote}>
       <div className="card-header restaurantName">{restaurant.name}</div>
       <div className="card-body">
         <p><span>Type :</span> {restaurant.type}</p>
