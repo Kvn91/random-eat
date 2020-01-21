@@ -4,20 +4,20 @@
     "name": "Môk",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "type": "Coréen",
-    "voted": false
+    "veto": false
   },
   {
     "id": 2,
     "name": "Parma Pizza",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "type": "Italien",
-    "voted": false
+    "veto": false
   },
   {
     "id": 3,
     "name": "Midi Gourmet",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "type": "Sandwicherie",
-    "voted": false
+    "veto": false
   }
 ]

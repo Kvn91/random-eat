@@ -8,9 +8,16 @@ const getRestaurantsSuccess = restaurants => ({
 
 export const getRestaurants = () => dispatch => dispatch(getRestaurantsSuccess(restaurants));
 
-const voteForARestaurantSuccess = restaurantId => ({
+const voteForARestaurantSuccess = restaurant => ({
   type: types.VOTE_FOR_A_RESTAURANT,
-  restaurantId: restaurantId
+  restaurant: restaurant
 })
 
-export const voteForARestaurant = (restaurantId) => dispatch => dispatch(voteForARestaurantSuccess(restaurantId));
+export const voteForARestaurant = restaurant => dispatch => dispatch(voteForARestaurantSuccess(restaurant));
+
+const vetoARestaurantSuccess = restaurantId => ({
+  type: types.VETO_A_RESTAURANT,
+  restaurantId: restaurantId
+});
+
+export const vetoARestaurant = restaurantId => dispatch => dispatch(vetoARestaurantSuccess(restaurantId));

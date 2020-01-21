@@ -3,8 +3,8 @@ import * as types from '../constants/ActionTypes';
 
 const restaurants = (state, action) => {
   switch (action.type) {
-    case types.VOTE_FOR_A_RESTAURANT:
-      return {...state, voted: true};
+    case types.VETO_A_RESTAURANT:
+      return {...state, veto: true};
     default:
       return state;
   }
@@ -21,6 +21,15 @@ const allRestaurants = (state =  [], action) => {
         }
         return restaurant;
       });
+  }
+}
+
+const votedRestaurants = (state = [], action) => {
+  switch (action.type) {
+    case types.VOTE_FOR_A_RESTAURANT:
+      return [...state, action.restaurant]
+    default:
+      return state;
   }
 }
 
@@ -46,4 +55,4 @@ const allRestaurantsById = (state = {}, action) => {
   }
 }
 
-export default combineReducers({allRestaurants, allRestaurantsById});
+export default combineReducers({allRestaurants, votedRestaurants});

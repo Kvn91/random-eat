@@ -18,28 +18,28 @@ body {
   cursor: pointer;
 }
 
-.restaurantCard::before {
-  background: #888;
+.veto::before {
+  background: red;
   position: absolute;
   display:block;
   content:'';
-  width: 170%;
+  width: 179%;
   height: 5%;
   top: 48%;
-  left: -30%;
-  transform: rotate(59deg);
+  left: -40%;
+  transform: rotate(60deg);
 }
 
-.restaurantCard::after {
-  background: #888;
+.veto::after {
+  background: red;
   position: absolute;
   display:block;
   content:'';
   width: 8%;
-  height: 70%;
-  left: 47%;
-  top: 15%;
-  transform: rotate(45deg);
+  height: 110%;
+  left: 45%;
+  top: -5%;
+  transform: rotate(30deg);
 }
 
 .restaurantName {
