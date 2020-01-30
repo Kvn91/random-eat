@@ -5,6 +5,8 @@ const restaurants = (state, action) => {
   switch (action.type) {
     case types.VETO_A_RESTAURANT:
       return {...state, veto: true};
+    case types.VETO_A_RESTAURANT:
+      return {...state, votes: votes+1};
     default:
       return state;
   }
@@ -27,7 +29,7 @@ const allRestaurants = (state =  [], action) => {
 const votedRestaurants = (state = [], action) => {
   switch (action.type) {
     case types.VOTE_FOR_A_RESTAURANT:
-      return [...state, action.restaurant]
+      return [...state, restaurants(action.restaurant, action)]
     default:
       return state;
   }
